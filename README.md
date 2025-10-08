@@ -18,8 +18,9 @@ Enter the code for admin.py and models.py
 ### STEP 4:
 Execute Django admin and create details for 10 books
 
-## PROGRAM
-`models.py``
+## PROGRAM:
+```
+models.py
 from django.db import models
 from django.contrib import admin
 class Car_DB(models.Model):
@@ -38,8 +39,7 @@ admin.site.register(Car_DB,Car_DBAdmin)
 
 
 ## OUTPUT:
-Screenshot (91).png
-
+![alt text](<Screenshot (91).png>)
 
 
 
