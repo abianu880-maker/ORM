@@ -19,33 +19,29 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-```
-admin.py
-
+`models.py``
+from django.db import models
 from django.contrib import admin
-from.models import Car,CarAdmin
-admin.site.register(Car,CarAdmin)
-
-models.py
-
-rom django.db import models
-from django.contrib import admin
-class Car(models.Model):
-    car_id=models.IntegerField(primary_key=True)
-    car_name=models.CharField(max_length=20)
-    color=models.CharField(max_length=20)
-    car_name=models.EmailField()
-    dop=models.DateField()
-class CarAdmin(admin.ModelAdmin):
-    list_display=['car_id','car_name','color','car_name','dop']
-
+class Car_DB(models.Model):
+      car_Name=models.CharField(max_length=10)
+      carID=models.IntegerField(primary_key=True)
+      fuelTupe=models.CharField(max_length=10)
+      color=models.CharField(max_length=6)
+      brand=models.CharField(max_length=8)
+class Car_DBAdmin(admin.ModelAdmin):
+      list_display=["car_Name","carID","fuelTupe","color","brand"]
+  admin.py
+  from django.contrib import admin
+from.models import Car_DB,Car_DBAdmin
+admin.site.register(Car_DB,Car_DBAdmin) 
 ```
 
 
-## OUTPUT
-![alt text](<Screenshot (16).png>)
+## OUTPUT:
+Screenshot (91).png
 
 
 
-## RESULT
+
+## RESULT :
 Thus the program for creating car inventory database database using ORM hass been executed successfully
